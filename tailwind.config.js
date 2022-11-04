@@ -4,6 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -64,6 +65,9 @@ module.exports = {
           800: "#2f2f2f",
           900: "#181818"
         },
+      },
+      backgroundImage: {
+        'hero-bg': "url('/assets/image/hero-bg.svg')",
       }
     },
   },
