@@ -44,7 +44,7 @@ export default function Home() {
             }
           </div>
           {/* MENU BTN FOR MOBILE SIZE */}
-          <Bars3Icon className="h-6 w-6 cursor-pointer md:hidden hover:text-primary_red-500"/>
+          <Bars3Icon className="h-6 w-6 cursor-pointer md:hidden text-secondary_white hover:text-primary_red-500"/>
         </header>
         <div className="w-full h-full">
           <Hero/>
