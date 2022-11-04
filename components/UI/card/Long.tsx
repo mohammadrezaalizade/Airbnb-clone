@@ -11,7 +11,7 @@ interface Props {
 const Long: React.FC<Props> = ({ src, title, to }) => {
   return (
     <Link className="w-full" href={to}>
-      <div className="flex items-center gap-2 rounded-2xl shadow-xl " >
+      <div className="flex items-center gap-2 rounded-2xl shadow-box" >
         <Image
           className="rounded-tl-2xl rounded-bl-2xl"
           src={src}

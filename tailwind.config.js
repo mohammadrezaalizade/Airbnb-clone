@@ -68,6 +68,9 @@ module.exports = {
       },
       backgroundImage: {
         'hero-bg': "url('/assets/image/hero-bg.svg')",
+      },
+      boxShadow:{
+        "box":"0px 0px 20px 2px rgba(0,0,0,0.1)"
       }
     },
   },

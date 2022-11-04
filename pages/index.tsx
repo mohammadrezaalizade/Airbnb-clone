@@ -5,6 +5,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import Hero from "../components/home/hero/Hero";
 import Section from "../components/UI/Section";
 import Long from "../components/UI/card/Long";
+import Big from "../components/UI/banner/Big";
 interface NavLink {
   title: string;
   link: string;
@@ -28,25 +29,24 @@ const navLinks: NavLink[] = [
 interface ExploreAirbnb {
   src: string;
   title: string;
-  to:string
+  to: string;
 }
 
 const exploreAirbnbs: ExploreAirbnb[] = [
   {
     src: "/static/img/1-small.jpeg",
     title: "Housing",
-    to:"/category/housing"
+    to: "/category/housing",
   },
   {
     src: "/static/img/2-small.jpeg",
     title: "Experiences",
-    to:"/category/experiences"
-
+    to: "/category/experiences",
   },
   {
     src: "/static/img/3-small.jpeg",
     title: "Adventures",
-    to:"/category/adventures"
+    to: "/category/adventures",
   },
 ];
 
@@ -80,13 +80,27 @@ export default function Home() {
         </header>
         <div className="w-full h-full">
           <Hero />
-          <Section
-            title="Explore Airbnb"
-            comment="A selection of accommodation checked according to quality and design criteria"
-          >
+          <Section title="Explore Airbnb">
             {exploreAirbnbs.map((item, index) => (
-             <Long src={item.src} title={item.title} to={item.to} key={index} />
+              <Long
+                src={item.src}
+                title={item.title}
+                to={item.to}
+                key={index}
+              />
             ))}
+          </Section>
+          {/* <Section
+            title="Airbnb Plus accommodations"
+            comment="A selection of accommodation checked according to quality and design criteria."
+          >
+            <Big/>
+          </Section> */}
+          <Section
+            title="Airbnb Plus accommodations"
+            comment="A selection of accommodation checked according to quality and design criteria."
+          >
+            <Big img="/static/banner/banner-1.svg" />
           </Section>
         </div>
       </section>
