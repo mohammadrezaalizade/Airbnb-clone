@@ -6,6 +6,7 @@ import Hero from "../components/home/hero/Hero";
 import Section from "../components/UI/Section";
 import Long from "../components/UI/card/Long";
 import Big from "../components/UI/banner/Big";
+import Tour from "../components/UI/card/Tour";
 interface NavLink {
   title: string;
   link: string;
@@ -50,6 +51,76 @@ const exploreAirbnbs: ExploreAirbnb[] = [
   },
 ];
 
+interface Tour {
+  to: string;
+  img: string;
+  country: string;
+  title: string;
+  detail: string;
+  rate: string;
+}
+
+const adventuresCards: Tour[] = [
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },{
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+];
+
 export default function Home() {
   return (
     <PageLayout>
@@ -90,17 +161,28 @@ export default function Home() {
               />
             ))}
           </Section>
-          {/* <Section
-            title="Airbnb Plus accommodations"
-            comment="A selection of accommodation checked according to quality and design criteria."
-          >
-            <Big/>
-          </Section> */}
           <Section
             title="Airbnb Plus accommodations"
             comment="A selection of accommodation checked according to quality and design criteria."
           >
             <Big img="/static/banner/banner-1.svg" />
+          </Section>
+          <Section
+            title="Discover Airbnb Adventures"
+            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+          >
+            <div className="flex flex-row gap-4 overflow-y-scroll w-full">
+              {adventuresCards.map((item, index) => (
+                <Tour
+                  country={item.country}
+                  detail={item.detail}
+                  img={item.img}
+                  rate={item.rate}
+                  title={item.title}
+                  to={item.to}
+                />
+              ))}
+            </div>
           </Section>
         </div>
       </section>
