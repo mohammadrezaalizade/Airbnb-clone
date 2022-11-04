@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageLayout from "../layouts/PageLayout";
 import {Bars3Icon} from "@heroicons/react/24/outline"
 import Hero from "../components/home/hero/Hero";
+import Section from "../components/UI/Section";
 interface NavLink{
   title:String;
   link:String;
@@ -48,6 +49,9 @@ export default function Home() {
         </header>
         <div className="w-full h-full">
           <Hero/>
+          <Section title="Explore Airbnb" comment="A selection of accommodation checked according to quality and design criteria">
+            <></>
+          </Section>
         </div>
       </section>
     </PageLayout>
