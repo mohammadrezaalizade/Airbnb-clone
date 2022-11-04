@@ -19,8 +19,8 @@ const Hero = () => {
   },[where,arrival,departure,passenger])
 
   return (
-    <div className='relative flex items-center justify-between p-4 w-full h-[80vh] md:h-[90vh] lg:h-[80vh] bg-hero-bg bg-cover bg-left '>
-      <form className='w-[50%] h-[70%] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-4'>
+    <div className='relative flex items-center justify-between p-9 pt-20 md:pt-0 w-full h-[100%] min-h-[80vh] md:h-[100%] lg:h-[80vh] bg-hero-bg bg-cover bg-left '>
+      <form className='w-[50%] h-[100%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-4'>
         {/* HEADER */}
         <p className='text-xl text-secondary_dark_gray-500 select-none'>Book unique accommodations and activities.</p>
         {/* FORM */}
