@@ -13,8 +13,8 @@ const Section:React.FC<Props> = ({comment,title,children}) => {
         <h2 className='text-secondary_dark_gray-600 text-lg font-medium'>{title}</h2>
         {comment && <p className='text-secondary_dark_gray-300 text-sm'>{comment}</p>}
      </div>
-      <div>
-        content
+      <div className='flex justify-evenly gap-5'>
+      {children}
       </div>
     </section>
   )
