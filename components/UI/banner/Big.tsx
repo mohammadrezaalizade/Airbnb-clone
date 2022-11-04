@@ -8,7 +8,7 @@ const Big:React.FC<Props> = ({img}) => {
   return (
     <section className="flex flex-col w-full h-full p-4 items-center justify-center relative">
       <div className="absolute z-50 flex flex-col justify-center items-center gap-2">
-        <img className="h-16 md:h-36 w-16 md:w-36" src="/assets/logo/logo-big.svg" />
+        <img className="h-16 md:h-20 w-16 md:w-20" src="/assets/logo/logo-big.svg" />
         <Link className="bg-secondary_white px-4 py-2 rounded-lg" href="/">
           <p className="flex justify-between items-center gap-1 text-sm text-secondary_dark_gray-500 capitalize">
             <span>Discover accommodations</span>
