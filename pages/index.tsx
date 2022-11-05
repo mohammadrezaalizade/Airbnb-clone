@@ -8,6 +8,7 @@ import Long from "../components/UI/card/Long";
 import Big from "../components/UI/banner/Big";
 import Tour from "../components/UI/card/Tour";
 import TourBig from "../components/UI/card/TourBig";
+import Mid from "../components/UI/banner/Mid";
 interface NavLink {
   title: string;
   link: string;
@@ -379,6 +380,40 @@ const topTour: Tour[] = [
   },
 ];
 
+interface Featured {
+  to: string;
+  attachMarker: boolean;
+  img: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+}
+const featuredCards: Featured[] = [
+  {
+    attachMarker: true,
+    description: "From 577€/person - 3 days",
+    img: "/static/img/fer-1.jpeg",
+    imgAlt: "/static/img/fer-1.jpeg",
+    title: "More than 200 verified stays",
+    to: "/",
+  },
+  {
+    attachMarker: true,
+    description: "From 577€/person - 3 days",
+    img: "/static/img/fer-2.jpeg",
+    imgAlt: "/static/img/fer-1.jpeg",
+    title: "More than 200 verified stays",
+    to: "/",
+  },{
+    attachMarker: true,
+    description: "From 577€/person - 3 days",
+    img: "/static/img/fer-3.jpeg",
+    imgAlt: "/static/img/fer-1.jpeg",
+    title: "More than 200 verified stays",
+    to: "/",
+  },
+];
+
 export default function Home() {
   return (
     <PageLayout>
@@ -475,6 +510,18 @@ export default function Home() {
                   key={index}
                 />
               ))}
+            </div>
+          </Section>
+          <Section
+            title="Featured Airbnb Destinations More"
+            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+          >
+            <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10 overflow-y-scroll">
+            {
+              featuredCards.map((item,index)=>(
+                <Mid attachMarker={item.attachMarker} description={item.description} img={item.img} imgAlt={item.imgAlt} title={item.title} to={item.to} key={index} />
+              ))
+            }
             </div>
           </Section>
         </div>
