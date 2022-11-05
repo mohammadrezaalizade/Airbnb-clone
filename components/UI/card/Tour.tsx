@@ -12,9 +12,9 @@ interface Props {
 }
 const Tour: React.FC<Props> = ({ country, detail, title, img, rate, to }) => {
   return (
-    <Link href={to} className="flex flex-col w-[140px] min-w-[200px] max-w-[500px] select-none">
+    <Link href={to} className="flex flex-col w-[140px] min-w-[200px] max-w-[500px] select-none group">
       <img
-        className="rounded-md w-full h-[190px] object-cover hover:shadow-md hover:shadow-red-300 transition duration-150 select-none"
+        className="rounded-md w-full h-[190px] object-cover group-hover:shadow-md group-hover:shadow-red-300 transition duration-150 select-none"
         src={img}
         alt={img}
       />

@@ -138,164 +138,246 @@ interface Accommodation {
   description: string;
 }
 
-const accommodationsCards:Accommodation[]=[
+const accommodationsCards: Accommodation[] = [
   {
-    to:"/",
-    tag:true,
-    rate:"4.9",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
+    to: "/",
+    tag: true,
+    rate: "4.9",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
   },
   {
-    to:"/",
-    tag:true,
-    rate:"3.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  }, {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
+    to: "/",
+    tag: true,
+    rate: "3.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
   },
   {
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  },{
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  },{
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  },{
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
-  },{
-    to:"/",
-    tag:true,
-    rate:"4.5",
-    photo:"/static/img/chabahar-med.jpeg",
-    altImage:"/static/img/chabahar-med.jpeg",
-    city:"Chabahar",
-    description:"From 577€/person - 3 days",
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
   },
-]
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+  {
+    to: "/",
+    tag: true,
+    rate: "4.5",
+    photo: "/static/img/chabahar-med.jpeg",
+    altImage: "/static/img/chabahar-med.jpeg",
+    city: "Chabahar",
+    description: "From 577€/person - 3 days",
+  },
+];
 
+const topTour: Tour[] = [
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+];
 
 export default function Home() {
   return (
@@ -356,18 +438,44 @@ export default function Home() {
                   rate={item.rate}
                   title={item.title}
                   to={item.to}
+                  key={index}
                 />
               ))}
             </div>
           </Section>
           <Section title="Accommodations around the world">
-           <div className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4 overflow-y-scroll">
-              {
-                  accommodationsCards.map((acc,index)=>(
-                    <TourBig altImage={acc.altImage} city={acc.city} description={acc.description} photo={acc.photo} rate={acc.rate} tag={acc.tag} to={acc.to} key={index}/>
-                  ))
-                }
-           </div>
+            <div className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4 overflow-y-scroll">
+              {accommodationsCards.map((acc, index) => (
+                <TourBig
+                  altImage={acc.altImage}
+                  city={acc.city}
+                  description={acc.description}
+                  photo={acc.photo}
+                  rate={acc.rate}
+                  tag={acc.tag}
+                  to={acc.to}
+                  key={index}
+                />
+              ))}
+            </div>
+          </Section>
+          <Section
+            title="Highly rated experiences"
+            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+          >
+            <div className="flex flex-row gap-4 overflow-y-scroll w-full">
+              {topTour.map((item, index) => (
+                <Tour
+                  country={item.country}
+                  detail={item.detail}
+                  img={item.img}
+                  rate={item.rate}
+                  title={item.title}
+                  to={item.to}
+                  key={index}
+                />
+              ))}
+            </div>
           </Section>
         </div>
       </section>
