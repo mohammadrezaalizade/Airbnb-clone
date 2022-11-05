@@ -7,6 +7,7 @@ import Section from "../components/UI/Section";
 import Long from "../components/UI/card/Long";
 import Big from "../components/UI/banner/Big";
 import Tour from "../components/UI/card/Tour";
+import TourBig from "../components/UI/card/TourBig";
 interface NavLink {
   title: string;
   link: string;
@@ -68,28 +69,8 @@ const adventuresCards: Tour[] = [
     to: "/",
     img: "/static/img/adven-1.jpeg",
     rate: "5.0",
-  },{
-    country: "USA",
-    detail: "From 577€/person - 3 days",
-    title: "2 Nights PACKAGE All Inclusive",
-    to: "/",
-    img: "/static/img/adven-1.jpeg",
-    rate: "5.0",
-  },{
-    country: "USA",
-    detail: "From 577€/person - 3 days",
-    title: "2 Nights PACKAGE All Inclusive",
-    to: "/",
-    img: "/static/img/adven-1.jpeg",
-    rate: "5.0",
-  },{
-    country: "USA",
-    detail: "From 577€/person - 3 days",
-    title: "2 Nights PACKAGE All Inclusive",
-    to: "/",
-    img: "/static/img/adven-1.jpeg",
-    rate: "5.0",
-  },{
+  },
+  {
     country: "USA",
     detail: "From 577€/person - 3 days",
     title: "2 Nights PACKAGE All Inclusive",
@@ -104,14 +85,40 @@ const adventuresCards: Tour[] = [
     to: "/",
     img: "/static/img/adven-1.jpeg",
     rate: "5.0",
-  },{
+  },
+  {
     country: "USA",
     detail: "From 577€/person - 3 days",
     title: "2 Nights PACKAGE All Inclusive",
     to: "/",
     img: "/static/img/adven-1.jpeg",
     rate: "5.0",
-  },{
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
+    country: "USA",
+    detail: "From 577€/person - 3 days",
+    title: "2 Nights PACKAGE All Inclusive",
+    to: "/",
+    img: "/static/img/adven-1.jpeg",
+    rate: "5.0",
+  },
+  {
     country: "USA",
     detail: "From 577€/person - 3 days",
     title: "2 Nights PACKAGE All Inclusive",
@@ -121,10 +128,179 @@ const adventuresCards: Tour[] = [
   },
 ];
 
+interface Accommodation {
+  to: string;
+  photo: string;
+  altImage: string;
+  tag: boolean;
+  city: string;
+  rate: string;
+  description: string;
+}
+
+const accommodationsCards:Accommodation[]=[
+  {
+    to:"/",
+    tag:true,
+    rate:"4.9",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },
+  {
+    to:"/",
+    tag:true,
+    rate:"3.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  }, {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },
+  {
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },{
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },{
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },{
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },{
+    to:"/",
+    tag:true,
+    rate:"4.5",
+    photo:"/static/img/chabahar-med.jpeg",
+    altImage:"/static/img/chabahar-med.jpeg",
+    city:"Chabahar",
+    description:"From 577€/person - 3 days",
+  },
+]
+
+
 export default function Home() {
   return (
     <PageLayout>
-      <section className=" relative">
+      <section className="relative">
         {/* HEADER */}
         <header className="px-2 py-4 flex justify-between items-center fixed z-50 w-full translate-x-0">
           <Link href="/">
@@ -183,6 +359,15 @@ export default function Home() {
                 />
               ))}
             </div>
+          </Section>
+          <Section title="Accommodations around the world">
+           <div className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4 overflow-y-scroll">
+              {
+                  accommodationsCards.map((acc,index)=>(
+                    <TourBig altImage={acc.altImage} city={acc.city} description={acc.description} photo={acc.photo} rate={acc.rate} tag={acc.tag} to={acc.to} key={index}/>
+                  ))
+                }
+           </div>
           </Section>
         </div>
       </section>
