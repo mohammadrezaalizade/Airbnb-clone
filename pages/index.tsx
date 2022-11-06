@@ -515,7 +515,7 @@ export default function Home() {
                   right: 0,
                   left: -highlyRatedExperiencesWidth,
                 }}
-                className="flex flex-row gap-4 overflow-y-scroll w-full"
+                className="flex flex-row gap-4 w-full"
               >
                 {topTour.map((item, index) => (
                   <Tour
@@ -535,7 +535,7 @@ export default function Home() {
             title="Featured Airbnb Destinations More"
             comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
           >
-            <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10 overflow-y-scroll">
+            <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10">
               {featuredCards.map((item, index) => (
                 <Mid
                   attachMarker={item.attachMarker}
