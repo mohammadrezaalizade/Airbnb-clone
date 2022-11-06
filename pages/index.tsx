@@ -9,7 +9,8 @@ import Tour from "../components/UI/card/Tour";
 import TourBig from "../components/UI/card/TourBig";
 import Mid from "../components/UI/banner/Mid";
 import Header from "../components/page/Header";
-
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 interface ExploreAirbnb {
   src: string;
@@ -386,7 +387,8 @@ const featuredCards: Featured[] = [
     imgAlt: "/static/img/fer-1.jpeg",
     title: "More than 200 verified stays",
     to: "/",
-  },{
+  },
+  {
     attachMarker: true,
     description: "From 577€/person - 3 days",
     img: "/static/img/fer-3.jpeg",
@@ -397,11 +399,38 @@ const featuredCards: Featured[] = [
 ];
 
 export default function Home() {
+  const [adventurescarouselWidth, setAdventurescarouselWidth] = useState(0);
+  const [accommodationscarouselWidth, setAccommodationscarouselWidth] =
+    useState(0);
+  const [highlyRatedExperiencesWidth, setHighlyRatedExperiencesWidth] =
+    useState(0);
+  const adventurescarousel = useRef<HTMLDivElement>(null);
+  const accommodationscarousel = useRef<HTMLDivElement>(null);
+  const highlyRatedExperiencesWidthCarousel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    setAdventurescarouselWidth(
+      adventurescarousel.current!.scrollWidth -
+        adventurescarousel.current!.offsetWidth
+    );
+    setAccommodationscarouselWidth(
+      accommodationscarousel.current!.scrollWidth -
+        accommodationscarousel.current!.offsetWidth
+    );
+    setHighlyRatedExperiencesWidth(
+      highlyRatedExperiencesWidthCarousel.current!.scrollWidth -
+        highlyRatedExperiencesWidthCarousel.current!.offsetWidth
+    );
+  }, [
+    adventurescarousel.current!,
+    accommodationscarousel.current!,
+    highlyRatedExperiencesWidthCarousel.current!,
+  ]);
+
   return (
     <PageLayout>
       <section className="relative">
         {/* HEADER */}
-        <Header/>
+        <Header />
         <div className="w-full h-full">
           <Hero />
           <Section title="Explore Airbnb">
@@ -424,64 +453,100 @@ export default function Home() {
             title="Discover Airbnb Adventures"
             comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
           >
-            <div className="flex flex-row gap-4 overflow-y-scroll w-full">
-              {adventuresCards.map((item, index) => (
-                <Tour
-                  country={item.country}
-                  detail={item.detail}
-                  img={item.img}
-                  rate={item.rate}
-                  title={item.title}
-                  to={item.to}
-                  key={index}
-                />
-              ))}
-            </div>
+            <motion.div ref={adventurescarousel} className="overflow-hidden">
+              <motion.div
+                drag="x"
+                dragConstraints={{ right: 0, left: -adventurescarouselWidth }}
+                className="flex flex-row gap-4 w-full"
+              >
+                {adventuresCards.map((item, index) => (
+                  <Tour
+                    country={item.country}
+                    detail={item.detail}
+                    img={item.img}
+                    rate={item.rate}
+                    title={item.title}
+                    to={item.to}
+                    key={index}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
           </Section>
           <Section title="Accommodations around the world">
-            <div className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4 overflow-y-scroll">
-              {accommodationsCards.map((acc, index) => (
-                <TourBig
-                  altImage={acc.altImage}
-                  city={acc.city}
-                  description={acc.description}
-                  photo={acc.photo}
-                  rate={acc.rate}
-                  tag={acc.tag}
-                  to={acc.to}
-                  key={index}
-                />
-              ))}
-            </div>
+            <motion.div
+              ref={accommodationscarousel}
+              className="overflow-hidden"
+            >
+              <motion.div
+                drag="x"
+                dragConstraints={{
+                  right: 0,
+                  left: -accommodationscarouselWidth,
+                }}
+                className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4"
+              >
+                {accommodationsCards.map((acc, index) => (
+                  <TourBig
+                    altImage={acc.altImage}
+                    city={acc.city}
+                    description={acc.description}
+                    photo={acc.photo}
+                    rate={acc.rate}
+                    tag={acc.tag}
+                    to={acc.to}
+                    key={index}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
           </Section>
           <Section
             title="Highly rated experiences"
             comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
           >
-            <div className="flex flex-row gap-4 overflow-y-scroll w-full">
-              {topTour.map((item, index) => (
-                <Tour
-                  country={item.country}
-                  detail={item.detail}
-                  img={item.img}
-                  rate={item.rate}
-                  title={item.title}
-                  to={item.to}
-                  key={index}
-                />
-              ))}
-            </div>
+            <motion.div
+              ref={highlyRatedExperiencesWidthCarousel}
+              className="overflow-hidden"
+            >
+              <motion.div
+                drag="x"
+                dragConstraints={{
+                  right: 0,
+                  left: -highlyRatedExperiencesWidth,
+                }}
+                className="flex flex-row gap-4 overflow-y-scroll w-full"
+              >
+                {topTour.map((item, index) => (
+                  <Tour
+                    country={item.country}
+                    detail={item.detail}
+                    img={item.img}
+                    rate={item.rate}
+                    title={item.title}
+                    to={item.to}
+                    key={index}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
           </Section>
           <Section
             title="Featured Airbnb Destinations More"
             comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
           >
             <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10 overflow-y-scroll">
-            {
-              featuredCards.map((item,index)=>(
-                <Mid attachMarker={item.attachMarker} description={item.description} img={item.img} imgAlt={item.imgAlt} title={item.title} to={item.to} key={index} />
-              ))
-            }
+              {featuredCards.map((item, index) => (
+                <Mid
+                  attachMarker={item.attachMarker}
+                  description={item.description}
+                  img={item.img}
+                  imgAlt={item.imgAlt}
+                  title={item.title}
+                  to={item.to}
+                  key={index}
+                />
+              ))}
             </div>
           </Section>
         </div>
