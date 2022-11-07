@@ -16,7 +16,7 @@ const PageLayout:React.FC<Props> = ({children}) => {
         <div className='h-full w-screen mb-4'>
         {children}
         </div>
-        <footer>
+        <footer className='bg-secondary_dark_gray-500 py-8 text-secondary_white'>
           <p className='text-center text-xs'>copyright © 2022 all rights reserved by <a href="https://github.com/mohammadrezaalizade" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Mohammadreza Alizadeh</a></p>
         </footer>
     </div>

@@ -6,13 +6,13 @@ interface Props{
 }
 const Big:React.FC<Props> = ({img}) => {
   return (
-    <section className="flex flex-col w-full h-full p-4 items-center justify-center relative">
-      <div className="absolute z-50 flex flex-col justify-center items-center gap-2">
+    <section className="flex flex-col md:w-[1206px] lg:w-full md:h-[310px] lg:h-2/3 p-4 items-center justify-center relative">
+      <div className="absolute z-50 flex flex-col justify-center items-center gap-8">
         <img className="h-8 md:h-20 w-8 md:w-20" src="/assets/logo/logo-big.svg" />
-        <Link className="bg-secondary_white px-4 py-2 rounded-lg" href="/">
-          <p className="flex justify-between items-center gap-1 text-xs text-secondary_dark_gray-500 capitalize">
+        <Link className="bg-secondary_white px-3 py-1 rounded-lg" href="/">
+          <p className="flex justify-between items-center gap-1 text-[10px] text-secondary_dark_gray-500 capitalize">
             <span>Discover accommodations</span>
-            <ChevronRightIcon className="h-4 w-4 cursor-pointer "/>
+            <ChevronRightIcon className="h-2 w-2 cursor-pointer "/>
           </p>
         </Link>
       </div>

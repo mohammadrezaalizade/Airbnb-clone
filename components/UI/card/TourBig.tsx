@@ -22,9 +22,9 @@ const TourBig: React.FC<Props> = ({
   to,
 }) => {
   return (
-    <Link className="flex flex-col gap-2 w-full h-full group" href={to}>
+    <Link className="flex flex-col gap-2 w-[289px] h-[265px] group" href={to}>
       <img
-        className="rounded-md w-full h-full min-w-[250px] min-h-[250px] md:w-[230px] md:h-[190px] object-cover group-hover:shadow-md group-hover:shadow-red-300 transition duration-150 select-none"
+        className="rounded-md w-full h-full  object-cover group-hover:shadow-md group-hover:shadow-red-300 transition duration-150 select-none"
         src={photo}
         alt={altImage}
       />

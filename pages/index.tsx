@@ -433,122 +433,124 @@ export default function Home() {
         <Header />
         <div className="w-full h-full">
           <Hero />
-          <Section title="Explore Airbnb">
-            {exploreAirbnbs.map((item, index) => (
-              <Long
-                src={item.src}
-                title={item.title}
-                to={item.to}
-                key={index}
-              />
-            ))}
-          </Section>
-          <Section
-            title="Airbnb Plus accommodations"
-            comment="A selection of accommodation checked according to quality and design criteria."
-          >
-            <Big img="/static/banner/banner-1.svg" />
-          </Section>
-          <Section
-            title="Discover Airbnb Adventures"
-            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
-          >
-            <motion.div ref={adventurescarousel} className="overflow-hidden">
-              <motion.div
-                drag="x"
-                dragConstraints={{ right: 0, left: -adventurescarouselWidth }}
-                className="flex flex-row gap-4 w-full"
-              >
-                {adventuresCards.map((item, index) => (
-                  <Tour
-                    country={item.country}
-                    detail={item.detail}
-                    img={item.img}
-                    rate={item.rate}
-                    title={item.title}
-                    to={item.to}
-                    key={index}
-                  />
-                ))}
-              </motion.div>
-            </motion.div>
-          </Section>
-          <Section title="Accommodations around the world">
-            <motion.div
-              ref={accommodationscarousel}
-              className="overflow-hidden"
-            >
-              <motion.div
-                drag="x"
-                dragConstraints={{
-                  right: 0,
-                  left: -accommodationscarouselWidth,
-                }}
-                className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4"
-              >
-                {accommodationsCards.map((acc, index) => (
-                  <TourBig
-                    altImage={acc.altImage}
-                    city={acc.city}
-                    description={acc.description}
-                    photo={acc.photo}
-                    rate={acc.rate}
-                    tag={acc.tag}
-                    to={acc.to}
-                    key={index}
-                  />
-                ))}
-              </motion.div>
-            </motion.div>
-          </Section>
-          <Section
-            title="Highly rated experiences"
-            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
-          >
-            <motion.div
-              ref={highlyRatedExperiencesWidthCarousel}
-              className="overflow-hidden"
-            >
-              <motion.div
-                drag="x"
-                dragConstraints={{
-                  right: 0,
-                  left: -highlyRatedExperiencesWidth,
-                }}
-                className="flex flex-row gap-4 w-full"
-              >
-                {topTour.map((item, index) => (
-                  <Tour
-                    country={item.country}
-                    detail={item.detail}
-                    img={item.img}
-                    rate={item.rate}
-                    title={item.title}
-                    to={item.to}
-                    key={index}
-                  />
-                ))}
-              </motion.div>
-            </motion.div>
-          </Section>
-          <Section
-            title="Featured Airbnb Destinations More"
-            comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
-          >
-            <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10">
-              {featuredCards.map((item, index) => (
-                <Mid
-                  attachMarker={item.attachMarker}
-                  description={item.description}
-                  img={item.img}
-                  imgAlt={item.imgAlt}
+          <div className="md:px-8">
+            <Section title="Explore Airbnb">
+              {exploreAirbnbs.map((item, index) => (
+                <Long
+                  src={item.src}
                   title={item.title}
                   to={item.to}
                   key={index}
                 />
               ))}
-            </div>
-          </Section>
+            </Section>
+            <Section
+              title="Airbnb Plus accommodations"
+              comment="A selection of accommodation checked according to quality and design criteria."
+            >
+              <Big img="/static/banner/banner-1.svg" />
+            </Section>
+            <Section
+              title="Discover Airbnb Adventures"
+              comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+            >
+              <motion.div ref={adventurescarousel} className="overflow-hidden">
+                <motion.div
+                  drag="x"
+                  dragConstraints={{ right: 0, left: -adventurescarouselWidth }}
+                  className="flex flex-row gap-4 w-full"
+                >
+                  {adventuresCards.map((item, index) => (
+                    <Tour
+                      country={item.country}
+                      detail={item.detail}
+                      img={item.img}
+                      rate={item.rate}
+                      title={item.title}
+                      to={item.to}
+                      key={index}
+                    />
+                  ))}
+                </motion.div>
+              </motion.div>
+            </Section>
+            <Section title="Accommodations around the world">
+              <motion.div
+                ref={accommodationscarousel}
+                className="overflow-hidden m-5"
+              >
+                <motion.div
+                  drag="x"
+                  dragConstraints={{
+                    right: 0,
+                    left: -accommodationscarouselWidth,
+                  }}
+                  className="grid grid-rows-1 md:grid-rows-2 grid-flow-col gap-4"
+                >
+                  {accommodationsCards.map((acc, index) => (
+                    <TourBig
+                      altImage={acc.altImage}
+                      city={acc.city}
+                      description={acc.description}
+                      photo={acc.photo}
+                      rate={acc.rate}
+                      tag={acc.tag}
+                      to={acc.to}
+                      key={index}
+                    />
+                  ))}
+                </motion.div>
+              </motion.div>
+            </Section>
+            <Section
+              title="Highly rated experiences"
+              comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+            >
+              <motion.div
+                ref={highlyRatedExperiencesWidthCarousel}
+                className="overflow-hidden"
+              >
+                <motion.div
+                  drag="x"
+                  dragConstraints={{
+                    right: 0,
+                    left: -highlyRatedExperiencesWidth,
+                  }}
+                  className="flex flex-row gap-4 w-full"
+                >
+                  {topTour.map((item, index) => (
+                    <Tour
+                      country={item.country}
+                      detail={item.detail}
+                      img={item.img}
+                      rate={item.rate}
+                      title={item.title}
+                      to={item.to}
+                      key={index}
+                    />
+                  ))}
+                </motion.div>
+              </motion.div>
+            </Section>
+            <Section
+              title="Featured Airbnb Destinations More"
+              comment="Multi-day trips organized by local experts with activities, meals and accommodation included"
+            >
+              <div className="grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-1 grid-flow-col gap-6 lg:gap-10">
+                {featuredCards.map((item, index) => (
+                  <Mid
+                    attachMarker={item.attachMarker}
+                    description={item.description}
+                    img={item.img}
+                    imgAlt={item.imgAlt}
+                    title={item.title}
+                    to={item.to}
+                    key={index}
+                  />
+                ))}
+              </div>
+            </Section>
+          </div>
         </div>
       </section>
     </PageLayout>

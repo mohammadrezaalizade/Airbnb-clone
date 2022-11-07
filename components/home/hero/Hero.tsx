@@ -27,7 +27,7 @@ const Hero = () => {
   }, [where, arrival, departure, passenger]);
 
   return (
-    <div className="relative flex items-center justify-between p-9 pt-20 md:pt-0 w-full h-[100%] min-h-[80vh] md:h-[100%] lg:h-[80vh] bg-hero-bg bg-cover bg-left ">
+    <div className="relative flex items-center justify-between p-9 md:pl-12 pt-20 md:pt-0 w-full h-[100%] min-h-[80vh] md:h-[100%] lg:h-[80vh] bg-hero-bg bg-cover bg-left ">
       <motion.form
         className="w-[50%] h-[100%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-4 overflow-hidden"
         initial={{

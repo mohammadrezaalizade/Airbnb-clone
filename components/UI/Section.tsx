@@ -28,9 +28,9 @@ const Section: React.FC<Props> = ({ comment, title, children }) => {
       }}
       className="flex flex-col gap-3 p-4 select-none"
     >
-      <div className="flex flex-col gap-1">
-        <motion.h2
-          className="text-lg font-medium text-secondary_dark_gray-500"
+      <div className="flex flex-col gap-1 mb-4">
+        <motion.h1
+          className="text-[24px] font-medium text-secondary_dark_gray-500"
           initial={{
             x: "-80vw",
           }}
@@ -44,10 +44,10 @@ const Section: React.FC<Props> = ({ comment, title, children }) => {
           }}
         >
           {title}
-        </motion.h2>
+        </motion.h1>
         {comment && (
           <motion.p
-            className="text-sm text-secondary_dark_gray-400"
+            className="text-[16px] text-secondary_dark_gray-400"
             initial={{
               opacity:0.8
             }}
