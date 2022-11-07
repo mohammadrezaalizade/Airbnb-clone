@@ -31,7 +31,7 @@ const Mid: React.FC<Props> = ({
         )}
         <img
           className={`${
-            attachMarker ? "blur-sm" : "blur-0"
+            attachMarker ? "blur-0" : "blur-0"
           } rounded-md  w-full md:max-w-[450px] h-[350px] md:h-[500]`}
           src={img}
           alt={imgAlt}
