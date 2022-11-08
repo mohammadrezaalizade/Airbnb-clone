@@ -2,7 +2,7 @@ import Input from "../../UI/Input";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import b from "../../../src/image/hero-bg.png";
+import b from "../../../src/image/hero-bg.jpeg";
 const Hero = () => {
   const [where, setWhere] = useState("");
   const [arrival, setArrival] = useState("");
