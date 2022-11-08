@@ -2,6 +2,7 @@ import Input from "../../UI/Input";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import b from "../../../src/image/hero-bg.png";
 const Hero = () => {
   const [where, setWhere] = useState("");
   const [arrival, setArrival] = useState("");
@@ -27,7 +28,7 @@ const Hero = () => {
   }, [where, arrival, departure, passenger]);
 
   return (
-    <div className="relative flex justify-center md:justify-start items-center p-9 h-[98vh] md:h-[80vh] w-screen">
+    <div className="relative flex justify-center md:justify-start items-center p-9 h-[98vh] md:h-[85vh] w-screen">
       <motion.form
         className="w-[50%] h-[50%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
         initial={{
@@ -66,11 +67,11 @@ const Hero = () => {
             x: "150vw",
           }}
           animate={{
-            x:0,
-            transition:{
+            x: 0,
+            transition: {
               delay: 1.4,
               duration: 0.8,
-            }
+            },
           }}
           className="flex flex-1 flex-col gap-3"
         >
@@ -117,7 +118,14 @@ const Hero = () => {
           Submit
         </button>
       </motion.form>
-      <Image className="w-screen object-cover" fill={true} src="/assets/image/hero-bg.svg" alt="Background image landing page" blurDataURL="/assets/image/hero-bg.svg" />
+      <Image
+        className="w-screen h-full object-cover"
+        fill={true}
+        src={b}
+        alt="Background image landing page"
+        placeholder="blur"
+        quality={100}
+      />
     </div>
   );
 };
