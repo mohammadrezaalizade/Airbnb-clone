@@ -1,7 +1,7 @@
 import Input from "../../UI/Input";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const Hero = () => {
   const [where, setWhere] = useState("");
   const [arrival, setArrival] = useState("");
@@ -27,9 +27,9 @@ const Hero = () => {
   }, [where, arrival, departure, passenger]);
 
   return (
-    <div className="relative flex items-center justify-between p-9 md:pl-12 pt-20 md:pt-0 w-full h-[100%] min-h-[80vh] md:h-[100%] lg:h-[80vh] bg-hero-bg bg-cover bg-left ">
+    <div className="relative flex justify-center md:justify-start items-center p-9 h-[98vh] md:h-[80vh] w-screen">
       <motion.form
-        className="w-[50%] h-[100%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-4 overflow-hidden"
+        className="w-[50%] h-[50%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
         initial={{
           x: "-100vw",
         }}
@@ -44,7 +44,7 @@ const Hero = () => {
       >
         {/* HEADER */}
         <motion.p
-          className="text-xl text-secondary_dark_gray-500 select-none"
+          className="text-sm md:text-xl text-secondary_dark_gray-500 select-none"
           initial={{
             y: "-100px",
             opacity: 0,
@@ -72,7 +72,7 @@ const Hero = () => {
               duration: 0.8,
             }
           }}
-          className="flex flex-1 flex-col gap-6"
+          className="flex flex-1 flex-col gap-3"
         >
           <Input
             type="text"
@@ -82,7 +82,7 @@ const Hero = () => {
             onChange={setWhere}
             value={where}
           />
-          <div className="flex flex-col md:flex-row gap-2">
+          <div className="flex flex-col md:flex-row gap-1">
             <Input
               type="date"
               label="Arrival"
@@ -111,12 +111,13 @@ const Hero = () => {
         </motion.div>
         {/* SUBMIT BTN */}
         <button
-          className="bg-primary_red-500 rounded-lg cursor-pointer p-4 text-secondary_white text-lg disabled:bg-primary_red-200 disabled:cursor-not-allowed"
+          className="bg-primary_red-500 rounded-lg cursor-pointer p-2 text-secondary_white text-lg disabled:bg-primary_red-200 disabled:cursor-not-allowed"
           disabled={isDisabled}
         >
           Submit
         </button>
       </motion.form>
+      <Image className="w-screen object-cover" fill={true} src="/assets/image/hero-bg.svg" alt="Background image landing page" blurDataURL="/assets/image/hero-bg.svg" />
     </div>
   );
 };
