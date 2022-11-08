@@ -28,9 +28,9 @@ const Hero = () => {
   }, [where, arrival, departure, passenger]);
 
   return (
-    <div className="relative flex justify-center md:justify-start items-center p-9 h-[98vh] md:h-[85vh] w-screen">
+    <div className="relative flex justify-center md:justify-start items-center p-9 h-[80vh] md:h-[80vh] w-screen">
       <motion.form
-        className="w-[50%] h-[50%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
+        className="w-[50%] h-[90%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
         initial={{
           x: "-100vw",
         }}
@@ -111,12 +111,22 @@ const Hero = () => {
           />
         </motion.div>
         {/* SUBMIT BTN */}
-        <button
+        <motion.button
+          initial={{
+            y: "100vh",
+          }}
+          animate={{
+            y: 0,
+            transition: {
+              delay: 1.6,
+              duration: 0.8,
+            },
+          }}
           className="bg-primary_red-500 rounded-lg cursor-pointer p-2 text-secondary_white text-lg disabled:bg-primary_red-200 disabled:cursor-not-allowed"
           disabled={isDisabled}
         >
           Submit
-        </button>
+        </motion.button>
       </motion.form>
       <Image
         className="w-screen h-full object-cover"
