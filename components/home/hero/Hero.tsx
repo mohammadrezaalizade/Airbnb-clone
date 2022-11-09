@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div className="relative flex justify-center md:justify-start items-center p-9 h-[80vh] md:h-[80vh] w-screen">
       <motion.form
-        className="w-[50%] h-[80%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
+        className="w-[50%] h-[90%] md:w-[70%] md:h-[70%] max-h-[100%] md:max-h-[500px] bg-white rounded-md p-4 min-w-[100%] md:min-w-[30vw] md:max-w-[500px] flex flex-col gap-2 overflow-hidden z-50"
         initial={{
           x: "-100vw",
         }}
